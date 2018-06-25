@@ -4,11 +4,24 @@ import NavSearch from "./NavSearch";
 import NavTweet from "./NavTweet";
 
 function Nav() {
+  const NavStyle = {
+    display: "flex",
+    justifyContent: "space-between",
+    borderBottom: "1px solid gray",
+    padding: "5px",
+    paddingBottom: "15px"
+  }
+  const otherNavStyle={
+    display: "flex"
+  }
   return(
-    <div>
+    <div style={NavStyle}>
       <NavDir/>
-      <NavSearch/>
-      <NavTweet/>
+      <div style={otherNavStyle}>
+        <NavSearch/>
+        <NavTweet/>
+
+      </div>
     </div>
   );
 }

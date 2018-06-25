@@ -6,15 +6,26 @@ import Feed from './Feed';
 import SuggestedFriends from "./SuggestedFriends";
 
 function App(){
+  const AppStyle={
+    display: "flex",
+    justifyContent: "space-between",
+    margin: "20px"
+  }
   return (
     <div>
-      <Nav />
-      <Profile
-        userImage="https://eva-vautier.com/wp-content/plugins/Products_Viewer/assets/img/default-avatar.png"/>
-      <Bio />
-      <Feed
-        userImage="https://eva-vautier.com/wp-content/plugins/Products_Viewer/assets/img/default-avatar.png"/>
-      <SuggestedFriends />
+      <div>
+        <Nav />
+      </div>
+      <div style={AppStyle}>
+        <div>
+          <Profile
+            userImage="https://eva-vautier.com/wp-content/plugins/Products_Viewer/assets/img/default-avatar.png"/>
+          <Bio />
+        </div>
+        <Feed
+          userImage="https://eva-vautier.com/wp-content/plugins/Products_Viewer/assets/img/default-avatar.png"/>
+        <SuggestedFriends />
+      </div>
     </div>
   );
 }

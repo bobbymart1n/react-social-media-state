@@ -1,10 +1,21 @@
 import React from "react";
 
 function FeedTweet(props){
+  const FeedTweetStyle={
+    justifyContent: "space-between",
+    display: "flex",
+    borderBottom: "1px solid gray",
+    backgroundColor: "blue",
+    padding: "10px"
+  }
+  const inputStyle={
+    minWidth: "350px",
+    minHeight: "30px"
+  }
   return (
-    <div>
-      <img src={props.userImage} height="20" width="20"></img>
-      <input type="text" placeholder="What's happening?"></input>
+    <div style={FeedTweetStyle}>
+      <img src={props.userImage} height="38" width="38"></img>
+      <input style={inputStyle} type="text" placeholder="What's happening?"></input>
     </div>
   );
 }

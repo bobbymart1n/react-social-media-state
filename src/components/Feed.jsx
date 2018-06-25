@@ -3,8 +3,11 @@ import FeedTweet from "./FeedTweet";
 import FeedPost from "./FeedPost";
 
 function Feed(props){
+  const FeedStyle={
+    border: "2px solid gray"
+  }
   return (
-    <div>
+    <div style={FeedStyle}>
       <FeedTweet
         userImage={props.userImage}/>
       <FeedPost/>

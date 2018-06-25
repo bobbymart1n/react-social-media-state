@@ -3,8 +3,12 @@ import ProfileUserDetailsPicture from "./ProfileUserDetailsPicture";
 import ProfileUserDetailsName from "./ProfileUserDetailsName";
 
 function ProfileUserDetails(props) {
+  const profileStyle = {
+    display: "flex",
+    justifyContent: "space-around"
+  }
   return(
-    <div>
+    <div style={profileStyle}>
       <ProfileUserDetailsPicture
         userImage={props.userImage}/>
       <ProfileUserDetailsName/>

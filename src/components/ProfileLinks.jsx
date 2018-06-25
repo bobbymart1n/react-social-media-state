@@ -2,11 +2,14 @@ import React from "react";
 
 
 function ProfileLinks() {
+  const ProfileLinksStyle = {
+    padding: "4px"
+  }
   return(
     <div>
-      <a href="#">TWEETS</a>
-      <a href="#">FOLLOWING</a>
-      <a href="#">FOLLOWERS</a>
+      <a style={ProfileLinksStyle} href="#">TWEETS</a>
+      <a style={ProfileLinksStyle} href="#">FOLLOWING</a>
+      <a style={ProfileLinksStyle} href="#">FOLLOWERS</a>
     </div>
   );
 }
