@@ -2,10 +2,11 @@ import React from "react";
 import ProfileUserDetails from "./ProfileUserDetails";
 import ProfileLinks from "./ProfileLinks";
 
-function Profile() {
+function Profile(props) {
   return(
     <div>
-      <ProfileUserDetails/>
+      <ProfileUserDetails
+        userImage={props.userImage}/>
       <ProfileLinks/>
     </div>
   );

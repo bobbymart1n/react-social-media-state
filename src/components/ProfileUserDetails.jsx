@@ -2,10 +2,11 @@ import React from "react";
 import ProfileUserDetailsPicture from "./ProfileUserDetailsPicture";
 import ProfileUserDetailsName from "./ProfileUserDetailsName";
 
-function ProfileUserDetails() {
+function ProfileUserDetails(props) {
   return(
     <div>
-      <ProfileUserDetailsPicture/>
+      <ProfileUserDetailsPicture
+        userImage={props.userImage}/>
       <ProfileUserDetailsName/>
     </div>
   );
