@@ -4,11 +4,21 @@ import SuggestedFriendsUserPicture from "./SuggestedFriendsUserPicture";
 import SuggestedFriendsUserButton from "./SuggestedFriendsUserButton";
 
 function SuggestedFriendsUser () {
+  const UserStyle = {
+    display: "flex",
+    alignItems: "center"
+  }
+  const UserStyle2 = {
+    padding: "10px",
+    textAlign: "center"
+  }
   return (
-    <div>
-      <SuggestedFriendsUserName/>
+    <div style={UserStyle}>
       <SuggestedFriendsUserPicture/>
-      <SuggestedFriendsUserButton/>
+      <div style={UserStyle2}>
+        <SuggestedFriendsUserName/>
+        <SuggestedFriendsUserButton/>
+      </div>
     </div>
   );
 }

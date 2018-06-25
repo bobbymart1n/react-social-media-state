@@ -3,7 +3,7 @@ import React from "react";
 
 function SuggestedFriendsUserPicture () {
   return (
-    <img src="https://eva-vautier.com/wp-content/plugins/Products_Viewer/assets/img/default-avatar.png" height="20" width="20"></img>
+    <img src="http://ems-kc.com/wp-content/uploads/2016/02/avatar.png" height="40" width="40"></img>
   );
 }
 

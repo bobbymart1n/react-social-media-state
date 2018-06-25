@@ -2,7 +2,7 @@ import React from "react";
 
 function Bio(){
   const BioStyle={
-    maxWidth: "200px",
+    maxWidth: "300px",
     border: "1px solid gray",
     padding: "10px"
   }
