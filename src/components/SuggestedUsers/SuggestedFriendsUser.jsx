@@ -1,7 +1,4 @@
 import React from "react";
-import SuggestedFriendsUserName from "./SuggestedFriendsUserName";
-import SuggestedFriendsUserPicture from "./SuggestedFriendsUserPicture";
-import SuggestedFriendsUserButton from "./SuggestedFriendsUserButton";
 
 function SuggestedFriendsUser () {
   const UserStyle = {
@@ -12,12 +9,17 @@ function SuggestedFriendsUser () {
     padding: "10px",
     textAlign: "center"
   }
+  const buttonStyle={
+    padding: "10px",
+    backgroundColor: "blue",
+    color: "white"
+  }
   return (
     <div style={UserStyle}>
-      <SuggestedFriendsUserPicture/>
+      <img src="http://ems-kc.com/wp-content/uploads/2016/02/avatar.png" height="40" width="40"></img>
       <div style={UserStyle2}>
-        <SuggestedFriendsUserName/>
-        <SuggestedFriendsUserButton/>
+        <h5>Donec eu orci et</h5>
+        <button style={buttonStyle}>Button</button>
       </div>
     </div>
   );

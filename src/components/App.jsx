@@ -1,9 +1,8 @@
 import React from "react";
-import Nav from "./Nav";
-import Profile from "./Profile";
-import Bio from "./Bio";
-import Feed from './Feed';
-import SuggestedFriends from "./SuggestedFriends";
+import Nav from "./Nav/Nav";
+import Profile from "./Profile/Profile";
+import Feed from './Feed/Feed';
+import SuggestedFriends from "./SuggestedUsers/SuggestedFriends";
 
 function App(){
   const AppStyle={
@@ -20,7 +19,6 @@ function App(){
         <div>
           <Profile
             userImage="https://eva-vautier.com/wp-content/plugins/Products_Viewer/assets/img/default-avatar.png"/>
-          <Bio />
         </div>
         <Feed
           userImage="https://eva-vautier.com/wp-content/plugins/Products_Viewer/assets/img/default-avatar.png"/>
