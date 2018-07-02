@@ -1,7 +1,7 @@
 import React from "react";
 import NavSearch from "./NavSearch";
 
-function Nav() {
+function Nav(props) {
   const NavStyle = {
     display: "flex",
     justifyContent: "space-between",
@@ -29,7 +29,9 @@ function Nav() {
         <a style={ElementStyle} href="#">Messages</a>
       </div>
       <div style={otherNavStyle}>
-        <NavSearch/>
+        <NavSearch
+          filterText={props.filterText}
+          onFilterTextChange={props.onFilterTextChange}/>
 
       </div>
     </div>

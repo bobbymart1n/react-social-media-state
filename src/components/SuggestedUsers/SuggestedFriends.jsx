@@ -16,19 +16,27 @@ const SUGGESTED_FRIENDS_LIST = [
   }
 ];
 
-function SuggestedFriends () {
+function SuggestedFriends (props) {
   const SugStyle={
     border: "1px solid grey",
     minWidth: "200px",
     padding: "15px"
   }
+  let filteredFriends = [];
+  const filterText = props.filterText;
+  SUGGESTED_FRIENDS_LIST.forEach((friend) => {
+    if(friend.name.includes(filterText)){
+      filteredFriends.push(friend);
+    }
+  });
+
   return (
     <div style={SugStyle}>
       <h5>Lorem Ipsum</h5>
-      {SUGGESTED_FRIENDS_LIST.map((friend, index) =>
-        <SuggestedFriendsUser name={friend.name}
-          image={friend.image}
-          key={index} />
+      {filteredFriends.map((friend, index) =>
+      <SuggestedFriendsUser name={friend.name}
+        image={friend.image}
+        key={index} />
       )}
     </div>
   );
