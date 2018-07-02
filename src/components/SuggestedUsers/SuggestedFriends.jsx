@@ -1,6 +1,20 @@
 import React from "react";
-import SuggestedFriendsTitle from "./SuggestedFriendsTitle";
 import SuggestedFriendsUser from "./SuggestedFriendsUser";
+
+const SUGGESTED_FRIENDS_LIST = [
+  {
+    name: 'Donec Eu',
+    image: 'http://ems-kc.com/wp-content/uploads/2016/02/avatar.png'
+  },
+  {
+    name: 'Eu Orci',
+    image: 'http://ems-kc.com/wp-content/uploads/2016/02/avatar.png'
+  },
+  {
+    name: 'Orci Et',
+    image: 'http://ems-kc.com/wp-content/uploads/2016/02/avatar.png'
+  }
+];
 
 function SuggestedFriends () {
   const SugStyle={
@@ -10,10 +24,12 @@ function SuggestedFriends () {
   }
   return (
     <div style={SugStyle}>
-      <SuggestedFriendsTitle/>
-      <SuggestedFriendsUser/>
-      <SuggestedFriendsUser/>
-      <SuggestedFriendsUser/>
+      <h5>Lorem Ipsum</h5>
+      {SUGGESTED_FRIENDS_LIST.map((friend, index) =>
+        <SuggestedFriendsUser name={friend.name}
+          image={friend.image}
+          key={index} />
+      )}
     </div>
   );
 }

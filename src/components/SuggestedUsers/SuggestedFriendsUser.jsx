@@ -1,6 +1,6 @@
 import React from "react";
 
-function SuggestedFriendsUser () {
+function SuggestedFriendsUser (props) {
   const UserStyle = {
     display: "flex",
     alignItems: "center"
@@ -16,9 +16,9 @@ function SuggestedFriendsUser () {
   }
   return (
     <div style={UserStyle}>
-      <img src="http://ems-kc.com/wp-content/uploads/2016/02/avatar.png" height="40" width="40"></img>
+      <img src={props.image} height="40" width="40"></img>
       <div style={UserStyle2}>
-        <h5>Donec eu orci et</h5>
+        <h5>{props.name}</h5>
         <button style={buttonStyle}>Button</button>
       </div>
     </div>
