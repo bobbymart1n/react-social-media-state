@@ -13,18 +13,25 @@ function FeedTweet(props){
     minWidth: "350px",
     minHeight: "30px"
   }
+  let _status = null;
+  function handleNewPostSubmission() {
+    props.onNewPost({name: 'Bobby', image: 'http://drinkinwilm.com/wp-content/uploads/2014/09/provider_female.jpg', status: _status.value})
+    _status.value = '';
+    props.onStatusShow();
+  }
   return (
     <div style={FeedTweetStyle}>
       <img src={props.userImage} height="38" width="38"></img>
-      <input style={inputStyle} type="text" placeholder="What's happening?"></input>
-      <button>Update Status</button>
+      <input style={inputStyle} ref={(input) => {_status = input}} type="text" placeholder="What's happening?"></input>
+      <button type="submit" onClick={handleNewPostSubmission}>Update Status</button>
     </div>
   );
 }
 
 FeedTweet.propTypes = {
   userImage:PropTypes.string,
-  onStatusShow:PropTypes.func
+  onStatusShow:PropTypes.func,
+  onNewPost: PropTypes.func
 }
 
 export default FeedTweet;

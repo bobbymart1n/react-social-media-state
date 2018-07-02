@@ -19,7 +19,7 @@ const FEED_POST_CONTENT = [
   }
 ]
 
-function FeedPost() {
+function FeedPost(props) {
   const postContainer = {
     display: 'flex',
     flexDirection: 'column',
@@ -27,10 +27,10 @@ function FeedPost() {
   }
   return (
     <div style={postContainer}>
-      {FEED_POST_CONTENT.map((content, index) =>
+      {props.postList.map((content, index) =>
         <FeedPostContent name={content.name}
           image={content.image}
-          content={content.content}
+          content={content.status}
           key={index} />
       )}
     </div>
