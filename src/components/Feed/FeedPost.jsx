@@ -1,29 +1,12 @@
 import React from "react";
 import FeedPostContent from "./FeedPostContent";
 
-const FEED_POST_CONTENT = [
-  {
-    name: 'Donna',
-    image: 'http://drinkinwilm.com/wp-content/uploads/2014/09/provider_female.jpg',
-    content: 'Lorem Ipsum dolar sit amet, consectetur adipiscing elit. Nullma'
-  },
-  {
-    name: 'Jacqueline',
-    image: 'http://drinkinwilm.com/wp-content/uploads/2014/09/provider_female.jpg',
-    content: 'Lorem Ipsum dolar sit amet, consectetur adipiscing elit. Nullma'
-  },
-  {
-    name: 'Susan',
-    image: 'http://drinkinwilm.com/wp-content/uploads/2014/09/provider_female.jpg',
-    content: 'Lorem Ipsum dolar sit amet, consectetur adipiscing elit. Nullma'
-  }
-]
-
 function FeedPost(props) {
   const postContainer = {
     display: 'flex',
     flexDirection: 'column',
-    height: '100%'
+    height: '100%',
+    minWidth: '400px'
   }
   return (
     <div style={postContainer}>
